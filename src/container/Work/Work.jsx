@@ -14,7 +14,6 @@ const Work = () => {
     const query = '*[_type == "works"]';
 
     client.fetch(query).then((data) => {
-      console.log("work", data);
       setWorks(data);
       setFilterWork(data);
     });
@@ -39,7 +38,7 @@ const Work = () => {
         My Creative <span>Portfolio</span> Section
       </h2>
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
+        {["UI/UX", "Web App", "Wordpress", "React JS", "Next JS", "All"].map(
           (item, index) => (
             <div
               key={index}
